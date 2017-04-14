@@ -4,7 +4,7 @@ For Discord.
 ### Commands
 help - DMs you the bot commands.
 
-8ball - Talk to the magic 8ball. (BROKEN)
+8ball - Talk to the magic 8ball.
 
 say - Makes the bot say whatever you want it to say, deletes your message too.
 
