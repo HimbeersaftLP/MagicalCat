@@ -16,6 +16,8 @@ ping - Tests latency and if the bot is online
 
 invite - DMs you the invite link for this bot.
 
+checkperm - Debugging command to check if you set the owner in the config correctly.
+
 cointoss - Cointoss command.
 # Installation
 You will need:
