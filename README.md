@@ -1,5 +1,5 @@
 # MagicalCat
-The most magical bot you'll ever use. Prefix is - (by default)
+The most magical bot you'll ever use. Prefix is - (by default) <br>
 For Discord.
 ### Commands
 help - DMs you the bot commands.
@@ -48,3 +48,14 @@ Start the bot!
 ```shell
 node app.js
 ```
+### WHAT?! I can't do that
+Alternatively you can skip all that and deploy to heroku. <br>
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+#### I don't want to use heroku
+Join the [BoxOfDevs Discord Server](https://discord.gg/PBFQj5K) to ask me for help self-hosting it, or in general. <br>
+My bot usually is running on there if you want to try it.
+
+#### I don't want to self-host. At all.
+Feel free to [add the bot](https://discordapp.com/oauth2/authorize?client_id=293427086855503872&scope=bot&permissions=305212430) that I host onto your server. <br>
+It's not always up though.
