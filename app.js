@@ -21,13 +21,6 @@ function coinToss() {
     return rand[Math.floor(Math.random()*rand.length)];
 }
 
-function checkPerm() {
-      if (msg.author.id === config.owner) {
-        var owner = "yes"
-      } else {
-       msg.reply("You don't have permission to perform this action.");
-      }
-}
 bot.on('message', msg => {
   if (msg.author.bot) return;
   if (!msg.content.startsWith(config.prefix)) return;
@@ -56,7 +49,7 @@ bot.on('message', msg => {
 
   if (command === "help") {
     msg.channel.sendMessage(":calling: It seems you have requested help. Check your DMs.");
-    msg.author.sendMessage("gonna type help soon lol")
+    msg.author.sendMessage("help - DMs you the bot commands.\n8ball - Talk to the magic 8ball. (BROKEN)\nsay - Makes the bot say whatever you want it to say, deletes your message too.\ncalculateadd - Calculates, only adding.\navatar - Shows you your avatar.\nping - Tests latency and if the bot is online\ninvite - DMs you the invite link for this bot.\ncheckperm - Debugging command to check if you set the owner in the config correctly.\ncointoss - Cointoss command.")
   }
   
   if (command === "avatar") {
@@ -84,16 +77,6 @@ bot.on('message', msg => {
       msg.reply("You have normal permissions.");
       }
   }
-/*  
-  if (command === "setstatus dnd") {
-    checkPerm()
-    if (owner = "yes") {
-      bot.user.setStatus("dnd");
-      msg.channel.sendMessage("Status set!").catch(console.error);
-      owner = "no"; // Always reset variable!
-    }
-  }
-*/
 });
 
 bot.login(config.token);
