@@ -1,0 +1,29 @@
+{
+  "name": "magicalcat",
+  "version": "1.0.0",
+  "description": "The most magical bot you'll ever use.",
+  "main": "app.js",
+  "dependencies": {
+    "cleverbot-node": "^0.2.5",
+    "cleverbot.io": "^1.0.4",
+    "discord.js": "^11.0.0",
+    "discord.js-music": "^1.0.3",
+    "pm2": "^2.2.3",
+    "ytdl-core": "^0.7.21"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js --use_strict",
+    "start": "node app.js --use_strict"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ultie0/MagicalCat.git"
+  },
+  "author": "Ulti",
+  "license": "SEE LICENSE IN LICENSE.TXT",
+  "bugs": {
+    "url": "https://github.com/Ultie0/MagicalCat/issues"
+  },
+  "homepage": "https://github.com/Ultie0/MagicalCat#readme"
+}

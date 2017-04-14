@@ -1,0 +1,7 @@
+{
+  "name": "MagicalCat",
+  "description": "The most magical discord bot you'll ever use.",
+  "repository": "https://github.com/Ultie0/MagicalCat",
+  "logo": "http://ulti.gq/wp-content/uploads/2017/04/magicalcatlogo.jpg",
+  "keywords": ["node", "discord", "bot"]
+}
