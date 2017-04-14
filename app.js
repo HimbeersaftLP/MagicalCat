@@ -11,8 +11,7 @@ bot.on('ready', () => {
 });
 
 function doMagic8BallVoodoo() {
-    var rand = [':8ball: Absolutly.', ':8ball: Absolutly not.', ':8ball: It is true.', ':8ball: Impossible.', ':8ball: Of course.', ':8ball: I do not think so.', ':8ball: It is true.', ':8ball: It is not true.', ':8ball: I am very undoubtful of that.', ':8ball: I am very doubtful of that.', ':8ball: Sources point to no.', ':8ball: Theories prove it.', ':8ball: Reply hazy try again', ':8ball: Ask again later', ':8ball: Better not tell you now', ':8ball: Cannot predict now', ':8ball: Concentrate and ask again'];
-
+    var rand = [':8ball: Absolutely.', ':8ball: Absolutely not.', ':8ball: It is true.', ':8ball: Impossible.', ':8ball: Of course.', ':8ball: I do not think so.', ':8ball: It is true.', ':8ball: It is not true.', ':8ball: I am very undoubtful of that.', ':8ball: I am very doubtful of that.', ':8ball: Sources point to no.', ':8ball: Theories prove it.', ':8ball: Reply hazy try again', ':8ball: Ask again later', ':8ball: Better not tell you now', ':8ball: Cannot predict now', ':8ball: Concentrate and ask again'];
     return rand[Math.floor(Math.random()*rand.length)];
 }
 
@@ -49,7 +48,7 @@ bot.on('message', msg => {
 
   if (command === "help") {
     msg.channel.sendMessage(":calling: It seems you have requested help. Check your DMs.");
-    msg.author.sendMessage("help - DMs you the bot commands.\n8ball - Talk to the magic 8ball. (BROKEN)\nsay - Makes the bot say whatever you want it to say, deletes your message too.\ncalculateadd - Calculates, only adding.\navatar - Shows you your avatar.\nping - Tests latency and if the bot is online\ninvite - DMs you the invite link for this bot.\ncheckperm - Debugging command to check if you set the owner in the config correctly.\ncointoss - Cointoss command.")
+    msg.author.sendMessage("help - DMs you the bot commands.\n8ball - Talk to the magic 8ball.\nsay - Makes the bot say whatever you want it to say, deletes your message too.\ncalculateadd - Calculates, only adding.\navatar - Shows you your avatar.\nping - Tests latency and if the bot is online\ninvite - DMs you the invite link for this bot.\ncheckperm - Debugging command to check if you set the owner in the config correctly.\ncointoss - Cointoss command.")
   }
   
   if (command === "avatar") {
