@@ -48,7 +48,7 @@ Edit the config
 #### Step 4
 Start the bot!
 ```shell
-node app.js
+npm start
 ```
 ### WHAT?! I can't do that
 Alternatively you can skip all that and deploy to heroku. <br>
