@@ -55,7 +55,7 @@ Alternatively you can skip all that and deploy to heroku. <br>
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 #### I don't want to use heroku
-Join the [BoxOfDevs Discord Server](https://discord.gg/PBFQj5K) to ask me for help self-hosting it, or in general. <br>
+Join the [BoxOfDevs Discord Server](https://discord.gg/NkgHp) to ask me for help self-hosting it, or in general. <br>
 My bot usually is running on there if you want to try it.
 
 #### I don't want to self-host. At all.
