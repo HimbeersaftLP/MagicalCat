@@ -7,7 +7,7 @@ const config = require("./config.json")
 bot.on('ready', () => {
   bot.user.setGame(config.game)
   bot.user.setStatus("online")
-  console.log(`MagicalCat initilized.`);
+  console.log(`MagicalCat initialized.`);
 });
 
 function doMagic8BallVoodoo() {
