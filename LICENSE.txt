@@ -25,6 +25,7 @@ Section 1 - Allowances:
     a. Change or update The Software in any way they wish, ensuring they follow the other terms of The License.
     b. Grant extra rights to The User who has requested them.
     c. Reserve the right to request The User to take down their instance of The Software/The Modification/The Redistribution.
+    d. Change which license The Software/The Modification is licensed under.
 
 Section 2 - Restrictions:
   1. Both The User & The Author Cannot:
