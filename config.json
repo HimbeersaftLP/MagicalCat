@@ -3,5 +3,6 @@
  "token": "TOKEN",
  "game": "-help for commands list",
  "owner": "YOUR USER ID (NOT NAME)",
- "randkey": "keyhere"
+ "randkey": "keyhere",
+ "clientid": "Your bot client ID here, not secret or token"
 }
