@@ -78,7 +78,7 @@ bot.on('message', msg => {
 
   if (command === "invite") {
     msg.reply("It seems you want to invite me to your server. Check your DMs. ")
-    msg.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=293427086855503872&scope=bot&permissions=305212430")
+    msg.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=" + config.clientid + "&scope=bot&permissions=305212430")
   }
 
   if (command === "cointoss") {
