@@ -18,6 +18,8 @@ invite - DMs you the invite link for this bot.
 
 checkperm - Debugging command to check if you set the owner in the config correctly.
 
+fish - Go fishing!
+
 cointoss - Cointoss command.
 # Installation
 You will need:
@@ -42,9 +44,21 @@ Edit the config
  "prefix": "-",
  "token": "TOKEN",
  "game": "-help for commands list",
- "owner": "YOUR USER ID (NOT NAME)"
+ "owner": "YOUR USER ID (NOT NAME)",
+ "randkey": "Your random.org API key here"
 }
 ```
+### Step3.5
+**Aquiring the random.org API key**
+Go to the random.org beta API [key regristration page.](https://api.random.org/api-keys/beta) and enter your email to receive your key. 
+<br>
+**Getting your bot token and client ID** <br>
+Go to the [Discord Developers bot regristration page.](https://discordapp.com/developers/applications/me/create)<br>
+Then when the form is filled out, you should see a button that says "Create a Bot User", click it. <br>
+I recommend that under "App Bot User" public bot is **checked** if you want the invite command to work.<br>
+Above the public bot tickbox there is a link to reveal your token, click it.<br>
+The first thing you see on the page, "App Details", your Client ID is right underneath it.<br>
+
 #### Step 4
 Start the bot!
 ```shell
