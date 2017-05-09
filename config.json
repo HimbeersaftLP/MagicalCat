@@ -2,5 +2,6 @@
  "prefix": "-",
  "token": "TOKEN",
  "game": "-help for commands list",
- "owner": "YOUR USER ID (NOT NAME)"
+ "owner": "YOUR USER ID (NOT NAME)",
+ "randkey": "keyhere"
 }
