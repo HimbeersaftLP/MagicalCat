@@ -30,7 +30,7 @@ bot.on('message', msg => {
 
   let command = msg.content.split(" ")[0];
   command = command.slice(config.prefix.length);
-  console.log(command);
+  console.log(command + "-" + msg.author.username);
 
   let args = msg.content.split(" ").slice(1);
 
