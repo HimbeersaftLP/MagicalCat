@@ -85,6 +85,7 @@ bot.on('message', msg => {
     .then(function(result) {
     var coinresponse = rand[result.random.data];
     msg.channel.send(coinresponse);
+    });
   }
   
   if (command === "checkperm") {
