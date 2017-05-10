@@ -67,8 +67,8 @@ bot.on('message', msg => {
     var random = new RandomOrg({ apiKey: config.randkey });
     random.generateIntegers({ min: 1, max: ballrand.length, n: 1 })
     .then(function(result) {
-    var ballresponse = rand[result.random.data];
-    msg.channel.send(ballresponse);
+      var ballresponse = rand[result.random.data];
+      msg.channel.send(ballresponse);
     });
   }
 
