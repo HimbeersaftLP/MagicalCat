@@ -2,7 +2,7 @@
   "name": "magicalcat",
   "version": "1.0.0",
   "description": "The most magical bot you'll ever use.",
-  "main": "app.js",
+  "main": "bot.js",
   "dependencies": {
     "cleverbot-node": "^0.2.5",
     "cleverbot.io": "^1.0.4",
@@ -14,8 +14,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node app.js --use_strict",
-    "start": "node app.js --use_strict"
+    "test": "node bot.js --use_strict",
+    "start": "node bot.js --use_strict"
   },
   "repository": {
     "type": "git",
