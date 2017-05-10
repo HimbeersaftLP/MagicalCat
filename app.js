@@ -14,14 +14,6 @@ bot.on('ready', () => {
   console.log("MagicalCat initialized.");
 });
 
-
-    
-
-function coinToss() {
-    var rand = ['You flipped the coin, it lands on tails.', 'I flipped the coin, it lands on tails.', 'You flipped the coin, it lands on heads.', 'I flipped the coin, it lands on heads.'];
-    return rand[Math.floor(Math.random()*rand.length)];
-}
-
 bot.on('message', msg => {
   if (msg.author.bot) return;
   if (!msg.content.startsWith(config.prefix)) return;
@@ -36,12 +28,12 @@ bot.on('message', msg => {
     let numArray = args.map(n=> parseInt(n));
     let total = numArray.reduce( (p, c) => p+c);
 
-    msg.channel.sendMessage(total).catch(console.error);
+    msg.channel.send(total).catch(console.error);
   }
 
   if (command === "say") {
      msg.delete();
-     msg.channel.sendMessage(args.join(" "));
+     msg.channel.send(args.join(" "));
   }
 
   if (command === "ping") {
@@ -49,7 +41,7 @@ bot.on('message', msg => {
   }
 
   if (command === "help") {
-    msg.channel.sendMessage(":calling: It seems you have requested help. Check your DMs.");
+    msg.channel.send(":calling: It seems you have requested help. Check your DMs.");
       var help = new Discord.RichEmbed()
         .setColor(Math.floor(Math.random()*16777215))
         .setTitle('Help for MagicalHourglass:')
@@ -71,15 +63,13 @@ bot.on('message', msg => {
   }
 
   if (command === "8ball") {
-    msg.channel.sendMessage(doMagic8BallVoodoo())
-    var rand = [":8ball: Absolutely.", ':8ball: Absolutely not.', ':8ball: It is true.', ':8ball: Impossible.', ':8ball: Of course.', ':8ball: I do not think so.', ':8ball: It is true.', ':8ball: It is not true.', ':8ball: I am very undoubtful of that.', ':8ball: I am very doubtful of that.', ':8ball: Sources point to no.', ':8ball: Theories prove it.', ':8ball: Reply hazy try again', ':8ball: Ask again later', ':8ball: Better not tell you now', ':8ball: Cannot predict now', ':8ball: Concentrate and ask again'];
+    var ballrand = [":8ball: Absolutely.", ':8ball: Absolutely not.', ':8ball: It is true.', ':8ball: Impossible.', ':8ball: Of course.', ':8ball: I do not think so.', ':8ball: It is true.', ':8ball: It is not true.', ':8ball: I am very undoubtful of that.', ':8ball: I am very doubtful of that.', ':8ball: Sources point to no.', ':8ball: Theories prove it.', ':8ball: Reply hazy try again', ':8ball: Ask again later', ':8ball: Better not tell you now', ':8ball: Cannot predict now', ':8ball: Concentrate and ask again'];
     var random = new RandomOrg({ apiKey: config.randkey });
-    random.generateIntegers({ min: 1, max: rand.length, n: 1 })
+    random.generateIntegers({ min: 1, max: ballrand.length, n: 1 })
     .then(function(result) {
-    var response = rand[result.random.data];
-    msg.channel.send(response);
+    var ballresponse = rand[result.random.data];
+    msg.channel.send(ballresponse);
     });
-}
   }
 
   if (command === "invite") {
@@ -88,7 +78,13 @@ bot.on('message', msg => {
   }
 
   if (command === "cointoss") {
-    msg.channel.sendMessage(coinToss())
+    var coinrand = ['You flipped the coin, it lands on tails.', 'I flipped the coin, it lands on tails.', 'You flipped the coin, it lands on heads.', 'I flipped the coin, it lands on heads.'];
+    return rand[Math.floor(Math.random()*rand.length)];
+    var random = new RandomOrg({ apiKey: config.randkey });
+    random.generateIntegers({ min: 1, max: coinrand.length, n: 1 })
+    .then(function(result) {
+    var coinresponse = rand[result.random.data];
+    msg.channel.send(coinresponse);
   }
   
   if (command === "checkperm") {
@@ -102,10 +98,10 @@ bot.on('message', msg => {
   if (command === "spam") {
     if (msg.author.id === config.owner) {
       for(count = 0; count < 100; count++){
-          msg.channel.sendMessage("Message " + count)
+          msg.channel.send("Message " + count)
       }
     } else {
-      msg.channel.sendMessage("You don't have permission to run this command.")
+      msg.channel.send("You don't have permission to run this command.")
       }
   }
   
