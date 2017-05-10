@@ -1,6 +1,6 @@
 {
   "name": "magicalcat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The most magical bot you'll ever use.",
   "main": "bot.js",
   "dependencies": {
