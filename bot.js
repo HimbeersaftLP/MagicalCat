@@ -43,8 +43,11 @@ bot.on('message', msg => {
   if (command === "help") {
     msg.channel.send(":calling: It seems you have requested help. Check your DMs.");
       var help = new Discord.RichEmbed()
-        .setColor(Math.floor(Math.random()*16777215))
-        .setTitle('Help for MagicalHourglass:')
+      var random = new RandomOrg({ apiKey: config.randkey });
+      random.generateIntegers({ min: 1, max: 16777215, n: 1 })
+      .then(function(result) {
+        .setColor(result.random.data)
+        .setTitle('Help for MagicalCat:')
         .setDescription('Commands:')
         .setThumbnail('http://i.imgur.com/cq3mRn7.png')
         .addField(config.prefix + "say", "Makes the bot say whatever you want it to say, deletes your message too\nExample: " + config.prefix + "say hi")
@@ -55,7 +58,8 @@ bot.on('message', msg => {
         .addField(config.prefix + "invite", "DMs you the invite link for this bot\nExample: " + config.prefix + "invite")
         .addField(config.prefix + "checkperm", "Debugging command to check if you set the owner correctly.\nExample: " + config.prefix + "checkperm")
         .addField(config.prefix + "cointoss", "Toss a coin\nExample: " + config.prefix + "cointoss");          
-      msg.author.sendEmbed(help);
+        message.author.send("", { embed: help });
+      });
   }
   
   if (command === "avatar") {
@@ -79,7 +83,6 @@ bot.on('message', msg => {
 
   if (command === "cointoss") {
     var coinrand = ['You flipped the coin, it lands on tails.', 'I flipped the coin, it lands on tails.', 'You flipped the coin, it lands on heads.', 'I flipped the coin, it lands on heads.'];
-    return rand[Math.floor(Math.random()*rand.length)];
     var random = new RandomOrg({ apiKey: config.randkey });
     random.generateIntegers({ min: 1, max: coinrand.length, n: 1 })
     .then(function(result) {
