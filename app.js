@@ -20,6 +20,7 @@ function doMagic8BallVoodoo() {
     random.generateIntegers({ min: 1, max: rand.length, n: 1 })
     .then(function(result) {
     return rand[result.random.data];
+    });
 }
 
 function coinToss() {
