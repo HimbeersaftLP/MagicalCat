@@ -41,11 +41,8 @@ bot.on('message', msg => {
 
   if (command === "help") {
     msg.channel.send(":calling: It seems you have requested help. Check your DMs.");
-      var help = new Discord.RichEmbed()
-      var random = new RandomOrg({ apiKey: config.randkey });
-      random.generateIntegers({ min: 1, max: 16777215, n: 1 })
-      .then(function(result) {
-        .setColor(result.random.data)
+      var help = new Discord.RichEmbed()      
+        .setColor(Math.floor(Math.random()*16777215))
         .setTitle('Help for MagicalCat:')
         .setDescription('Commands:')
         .setThumbnail('http://i.imgur.com/cq3mRn7.png')
