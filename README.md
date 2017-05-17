@@ -1,4 +1,4 @@
-# MagicalCat
+# MagicalCat [![Build Status](https://travis-ci.org/Ultie0/MagicalCat.svg?branch=master)](https://travis-ci.org/Ultie0/MagicalCat)
 The most magical bot you'll ever use. Prefix is - (by default) <br>
 For Discord.
 ### Commands
