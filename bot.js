@@ -36,14 +36,15 @@ bot.on('message', msg => {
      msg.channel.send(args.join(" "));
   }
 
-  if (command === "ping") { 
-    msg.channel.send("Pong! (hold on, processing latency...)").then(m => m.edit(`Pong! (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`) );
+  if (command === "ping") {
+    msg.channel.send("Pong! (hold on, processing latency...)").then(m => m.edit("Pong! (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)") );
+  }
 
   if (command === "help") {
     msg.channel.send(":calling: It seems you have requested help. Check your DMs.");
-      var help = new Discord.RichEmbed()      
+      var help = new Discord.RichEmbed()
         .setColor(Math.floor(Math.random()*16777215))
-        .setTitle('Help for MagicalCat:')
+        .setTitle('Help for MagicalHourglass:')
         .setDescription('Commands:')
         .setThumbnail('http://i.imgur.com/cq3mRn7.png')
         .addField(config.prefix + "say", "Makes the bot say whatever you want it to say, deletes your message too\nExample: " + config.prefix + "say hi")
@@ -54,7 +55,7 @@ bot.on('message', msg => {
         .addField(config.prefix + "invite", "DMs you the invite link for this bot\nExample: " + config.prefix + "invite")
         .addField(config.prefix + "checkperm", "Debugging command to check if you set the owner correctly.\nExample: " + config.prefix + "checkperm")
         .addField(config.prefix + "cointoss", "Toss a coin\nExample: " + config.prefix + "cointoss");          
-      message.author.sendEmbed(help);   
+      msg.author.sendEmbed(help);
   }
   
   if (command === "avatar") {
@@ -66,8 +67,8 @@ bot.on('message', msg => {
     var random = new RandomOrg({ apiKey: config.randkey });
     random.generateIntegers({ min: 1, max: ballrand.length, n: 1 })
     .then(function(result) {
-      var ballresponse = rand[result.random.data];
-      msg.channel.send(ballresponse);
+    var ballresponse = rand[result.random.data];
+    msg.channel.send(ballresponse);
     });
   }
 
@@ -78,12 +79,12 @@ bot.on('message', msg => {
 
   if (command === "cointoss") {
     var coinrand = ['You flipped the coin, it lands on tails.', 'I flipped the coin, it lands on tails.', 'You flipped the coin, it lands on heads.', 'I flipped the coin, it lands on heads.'];
+    return rand[Math.floor(Math.random()*rand.length)];
     var random = new RandomOrg({ apiKey: config.randkey });
     random.generateIntegers({ min: 1, max: coinrand.length, n: 1 })
     .then(function(result) {
     var coinresponse = rand[result.random.data];
     msg.channel.send(coinresponse);
-    });
   }
   
   if (command === "checkperm") {
