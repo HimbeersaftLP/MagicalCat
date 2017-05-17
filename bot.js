@@ -42,19 +42,19 @@ bot.on('message', msg => {
   if (command === "help") {
     msg.channel.send(":calling: It seems you have requested help. Check your DMs.");
       var help = new Discord.RichEmbed()      
-        .setColor(Math.floor(Math.random()*16777215))
-        .setTitle('Help for MagicalCat:')
-        .setDescription('Commands:')
-        .setThumbnail('http://i.imgur.com/cq3mRn7.png')
-        .addField(config.prefix + "say", "Makes the bot say whatever you want it to say, deletes your message too\nExample: " + config.prefix + "say hi")
-        .addField(config.prefix + "8ball", "Talk to the magic 8ball\nExample: " + config.prefix + "8ball Am I beautiful?")
-        .addField(config.prefix + "calculateadd", "Calculates, only adding\nExample: " + config.prefix + "calculateadd 7 4")
-        .addField(config.prefix + "avatar", "Gives you a link to your avatar\nExample: " + config.prefix + "avatar")
-        .addField(config.prefix + "ping", "Tests the latency\nExample: " + config.prefix + "ping")
-        .addField(config.prefix + "invite", "DMs you the invite link for this bot\nExample: " + config.prefix + "invite")
-        .addField(config.prefix + "checkperm", "Debugging command to check if you set the owner correctly.\nExample: " + config.prefix + "checkperm")
-        .addField(config.prefix + "cointoss", "Toss a coin\nExample: " + config.prefix + "cointoss");          
-        message.author.send("", { embed: help });
+      .setColor(Math.floor(Math.random()*16777215))
+      .setTitle('Help for MagicalCat:')
+      .setDescription('Commands:')
+      .setThumbnail('http://i.imgur.com/cq3mRn7.png')
+      .addField(config.prefix + "say", "Makes the bot say whatever you want it to say, deletes your message too\nExample: " + config.prefix + "say hi")
+      .addField(config.prefix + "8ball", "Talk to the magic 8ball\nExample: " + config.prefix + "8ball Am I beautiful?")
+      .addField(config.prefix + "calculateadd", "Calculates, only adding\nExample: " + config.prefix + "calculateadd 7 4")
+      .addField(config.prefix + "avatar", "Gives you a link to your avatar\nExample: " + config.prefix + "avatar")
+      .addField(config.prefix + "ping", "Tests the latency\nExample: " + config.prefix + "ping")
+      .addField(config.prefix + "invite", "DMs you the invite link for this bot\nExample: " + config.prefix + "invite")
+      .addField(config.prefix + "checkperm", "Debugging command to check if you set the owner correctly.\nExample: " + config.prefix + "checkperm")
+      .addField(config.prefix + "cointoss", "Toss a coin\nExample: " + config.prefix + "cointoss");          
+      message.author.send("", { embed: help });
       });
   }
   
@@ -109,9 +109,9 @@ bot.on('message', msg => {
     var random = new RandomOrg({ apiKey: config.randkey });
     random.generateIntegers({ min: 1, max: 6, n: 1 })
     .then(function(result) {
-      var caught = fish[result.random.data];
-      msg.reply("You caught a " + caught + "!");
-      msg.react(caught);
+    var caught = fish[result.random.data];
+    msg.reply("You caught a " + caught + "!");
+    msg.react(caught);
     });
   }
 
