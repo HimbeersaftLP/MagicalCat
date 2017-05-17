@@ -54,8 +54,7 @@ bot.on('message', msg => {
         .addField(config.prefix + "invite", "DMs you the invite link for this bot\nExample: " + config.prefix + "invite")
         .addField(config.prefix + "checkperm", "Debugging command to check if you set the owner correctly.\nExample: " + config.prefix + "checkperm")
         .addField(config.prefix + "cointoss", "Toss a coin\nExample: " + config.prefix + "cointoss");          
-        message.author.send("", { embed: help });
-      });
+      message.author.sendEmbed(help);   
   }
   
   if (command === "avatar") {
