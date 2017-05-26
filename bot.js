@@ -32,12 +32,13 @@ bot.on('message', msg => {
   }
 
   if (command === "say") {
-     msg.delete();
-     msg.channel.send(args.join(" "));
+    msg.delete();
+    msg.channel.send(args.join(" "));
   }
 
-  if (command === "ping") { 
-    msg.channel.send("Pong! (hold on, processing latency...)").then(m => m.edit(`Pong! (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`) );
+  if (command === "ping") {
+    msg.channel.send("Pong! (hold on, processing latency...)").then(m => m.edit(`Pong! (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`));
+  }
 
   if (command === "help") {
     msg.channel.send(":calling: It seems you have requested help. Check your DMs.");
@@ -55,7 +56,6 @@ bot.on('message', msg => {
         .addField(config.prefix + "checkperm", "Debugging command to check if you set the owner correctly.\nExample: " + config.prefix + "checkperm")
         .addField(config.prefix + "cointoss", "Toss a coin\nExample: " + config.prefix + "cointoss");          
         message.author.send("", { embed: help });
-      });
   }
   
   if (command === "avatar") {
